@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <title>Thomas Peeler's Tech Blog</title>
+</head>
+
+<body>
+    <!-- add navbar with navigatable links to routes -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+                <a class="navbar-item">
+                    Dashboard
+                </a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-dark" href="/logout">Logout</a>
+                        <a class="button is-light" href="/login">
+                            Log in/Sign Up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- login form-->
+    <form action="action_page.php" method="post">
+        <div class="container">
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+
+    <!-- register form-->
+    <aside>
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <label for="uname">New Username</label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw">New Password</label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </aside>
+</body>
+
+</html>
