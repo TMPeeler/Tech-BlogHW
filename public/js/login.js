@@ -6,6 +6,8 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
+
+    console.log(email);
     if (email && password) {
       // make post request of user email and pass as JSON 
       const response = await fetch('/api/users/login', {
@@ -14,6 +16,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       //check to see if email and pass matches
+      // console.log(response);
       if (response.ok) {
         // If successful, redirect the browser to the profile page
         document.location.replace('/');

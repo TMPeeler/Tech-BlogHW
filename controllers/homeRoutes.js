@@ -16,7 +16,7 @@ router.get('/', async (req, res)=> {
 
         res.render('homepage', {
             post: posts, 
-            // logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in 
         });
 
     } catch (err) {
@@ -26,6 +26,7 @@ router.get('/', async (req, res)=> {
 });
 
 router.get('/login', async (req, res)=> {
+    
     res.render('login');
 });
 // require models
