@@ -6,7 +6,7 @@ const Post = require('../models/Post');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', async (req, res)=> {
+router.get('/', withAuth, async (req, res)=> {
     try {
         const postData = await Post.findAll({
             

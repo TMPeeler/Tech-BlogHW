@@ -3,4 +3,18 @@
 <h1>{{title}}</h1>
 <h2>{{text}}</h2>
 <h2>{{createdAt}}</h2>
+<h2>Created by userId: {{userId}} </h2>
+<br>
 {{/each}}
+
+<form class="new-post-form">
+        <div class="container">
+            <label for="post-title">New Post Title</label>
+            <input  type="text" placeholder="Enter Post Title"  id="post-title"/>
+            <label >Text</label>
+            <input type="text" placeholder="Enter Post Text"  id="post-text"/>
+            <button type="submit">SUBMIT NEW POST</button>
+        </div>
+    </form>
+
+<script src="./js/homepage.js"></script>

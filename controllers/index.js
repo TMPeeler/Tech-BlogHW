@@ -4,7 +4,7 @@ const apiRoutes = require('./api');
 //require api routes
 const homeRoutes = require('./homeRoutes');
 
-// const {Comment , User, Post } = require('')
+
 // require routing page that serves handlebars content
 
 router.use('/', homeRoutes);

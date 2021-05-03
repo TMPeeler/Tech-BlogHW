@@ -53,6 +53,7 @@ router.post('/', async (req, res) => {
     }
   });
 
+  //post request for logout that destroys session
 
 
   module.exports = router;
