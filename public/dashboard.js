@@ -4,7 +4,7 @@ const newFormHandler = async (event) => {
     const name = document.querySelector('#post-title').value.trim();
     const text = document.querySelector('#post-text').value.trim();
   
-    if (name && needed_funding && description) {
+    if (name && text) {
       const response = await fetch(`/api/post`, {
         method: 'POST',
         body: JSON.stringify({ name, text}),
@@ -14,7 +14,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/api/posts/dashboard');
         // is this supposed to be the post route???
       } else {
         alert('Failed to create project');
@@ -31,7 +31,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/api/posts/dashboard');
       } else {
         alert('Failed to delete post');
       }

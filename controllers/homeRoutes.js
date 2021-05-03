@@ -26,9 +26,11 @@ router.get('/', async (req, res)=> {
 });
 
 router.get('/login', async (req, res)=> {
-    
+
     res.render('login');
 });
+
+
 // require models
 
 
