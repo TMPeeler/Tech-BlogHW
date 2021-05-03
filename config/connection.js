@@ -1,3 +1,4 @@
+const Sequelize = require('sequelize');
 require('dotenv').config();
 // hide pass and user and name
 

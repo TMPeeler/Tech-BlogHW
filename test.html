@@ -14,17 +14,17 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
+                <a class="navbar-item" href="/">
                     Home
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="/dashboard">
                     Dashboard
                 </a>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-dark" href="/logout">Logout</a>
+                        <a class="button is-dark" href="/logout" id="logout">Logout</a>
                         <a class="button is-light" href="/login">
                             Log in/Sign Up
                         </a>
@@ -35,29 +35,33 @@
     </nav>
 
     <!-- login form-->
-    <form action="action_page.php" method="post">
+    <!-- <form action="action_page.php" method="post" class="login-form">
         <div class="container">
-            <label for="uname">Username</label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="uname" >Email</label>
+            <input type="text" placeholder="Enter Username" name="email" required id="email-login">
             <label for="psw">Password</label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="password" required id="password-login">
             <button type="submit">Login</button>
         </div>
-    </form>
+    </form> -->
 
 
     <!-- register form-->
-    <aside>
-        <form action="action_page.php" method="post">
+    <!-- <aside>
+        <form action="action_page.php" method="post" class="signup-form">
             <div class="container">
                 <label for="uname">New Username</label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text" placeholder="Enter Username" name="uname" required id="name-signup">
+                <label for="uname">New Email</label>
+                <input type="text" placeholder="Enter Username" name="uname" required id="email-signup">
                 <label for="psw">New Password</label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" name="psw" required id="password-signup">
                 <button type="submit">Sign Up</button>
             </div>
         </form>
-    </aside>
+    </aside> -->
+
+    
 </body>
 
 </html>

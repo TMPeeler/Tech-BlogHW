@@ -1,0 +1,24 @@
+[
+{
+    "title": "post one",
+    "text": "this homework is hella hard",
+    "user_id": 1
+
+},
+{
+
+    "title": "post two",
+    "text": "this homework is super duper hard",
+    "user_id": 2
+
+
+},
+{
+
+    "title": "post three",
+    "text": "this homework is ultra hard",
+    "user_id": 3
+
+
+}
+]
