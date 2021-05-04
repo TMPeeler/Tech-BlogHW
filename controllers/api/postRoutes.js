@@ -34,18 +34,13 @@ const withAuth = require('../../utils/auth');
 });
 
 router.post('/new', async (req, res) => {
+  // console.log('/api/posts/new', req.body);
+  // console.log(req.session.user_id);
+  // console.log(newPost);
+  const newPost = {...req.body, userId: req.session.user_id}
   try {
 
-    const postData = await Post.create(req.body);
-//       {
-//       where: {
-//         // user_id: req.params.id
-//         user_id: req.session.user_id,
-//       },
-// }
-
-    // const posts = postData.map((post) => post.get({ plain: true }));
-    
+    const postData = await Post.create(newPost);
 
     res.status(200).json(postData);
 

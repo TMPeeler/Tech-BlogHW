@@ -1,13 +1,16 @@
+
+
 const newPost = async (event) => {
     event.preventDefault();
     const title = document.querySelector('#post-title').value.trim();
     const text = document.querySelector('#post-text').value.trim();
-    const userId = 1;
+    // const userId = 1;
+    // const userId = req.session.user_id;
 
-    if (title && text && userId) {
+    if (title && text ) {
       const response = await fetch(`/api/posts/new`, {
         method: 'POST',
-        body: JSON.stringify({ title, text, userId}),
+        body: JSON.stringify({ title, text}),
         headers: {
           'Content-Type': 'application/json',
         },
