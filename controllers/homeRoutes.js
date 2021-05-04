@@ -48,8 +48,6 @@ router.get('/comments', withAuth, async (req, res) => {
 
         res.status(500).json(err);
     }
-
-
 });
 // require models
 

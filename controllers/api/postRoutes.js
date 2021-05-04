@@ -1,11 +1,16 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
   router.get('/dashboard', withAuth, async (req, res) => {
     console.log("DASH POSTS ");
     try {
         const postData = await Post.findAll({
+
+          // include: {
+          //   model: Comment,
+          //   include: [User],
+          // },
           where: {
             // user_id: req.params.id
             user_id: req.session.user_id,
@@ -68,7 +73,7 @@ router.post('/new', async (req, res) => {
 //     });
 
 
-// })
+// });
 
 
 
