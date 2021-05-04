@@ -30,7 +30,27 @@ router.get('/login', async (req, res)=> {
     res.render('login');
 });
 
+router.get('/comments', withAuth, async (req, res) => {
+    try{
+        const commentData = await Comment.findAll({});
+        
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
 
+
+        res.render('comment', {
+            comment: comments, 
+
+            logged_in: req.session.logged_in 
+        });
+
+    
+    } catch (err) {
+
+        res.status(500).json(err);
+    }
+
+
+});
 // require models
 
 

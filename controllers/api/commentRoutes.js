@@ -3,14 +3,14 @@ const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // "api/comments/"
-router.get('/', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
 
     try {
 
         const commentData = await Comment.findAll({});
 
         const comments = commentData.map((comment) => comment.get({ plain: true }));
-
+        console.log(comments);
         res.render('dashboard', {
             comment: comments, 
             logged_in: req.session.logged_in 
