@@ -3,6 +3,7 @@ const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
   router.get('/dashboard', withAuth, async (req, res) => {
+    console.log("DASH POSTS ");
     try {
         const postData = await Post.findAll({
           where: {
@@ -10,7 +11,8 @@ const withAuth = require('../../utils/auth');
             user_id: req.session.user_id,
           },
         });
-
+        // .populate('Comments');
+        console.log(postData);
         const posts = postData.map((post) => post.get({ plain: true }));
 
         res.render('dashboard', {
