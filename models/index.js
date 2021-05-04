@@ -21,10 +21,10 @@ Post.belongsTo(User, {
 
 });
 
-// Post.hasMany(Comment, {
-//     foreignKey: 'post_id'
+Post.hasMany(Comment, {
+    foreignKey: 'post_id'
 
-// });
+});
 
 // Comment.belongsTo(User, {
 //     foreignKey: 'user_id'
